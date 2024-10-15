@@ -4,7 +4,9 @@
 
 # Nombre del Proyecto
 
-(me ayudan los chicos)
+Grupo 3: CoffeeCode aplicando React.
+
+(me ayudan los chicos a agg descripcion)
 
 ## Índice
 
