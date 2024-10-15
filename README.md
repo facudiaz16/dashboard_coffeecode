@@ -36,22 +36,19 @@ Grupo 3: CoffeeCode aplicando React.
 1. Clona el repositorio:
    ```bash
    git clone https://github.com/tu-usuario/nombre-del-proyecto.git
-   Navega a la carpeta del proyecto:
-bash
-Copiar código
-cd nombre-del-proyecto
-Instala las dependencias:
-bash
-Copiar código
-npm install
-Inicia la aplicación:
-bash
-Copiar código
-npm start
-Uso
-Instrucciones sobre cómo usar la aplicación. Por ejemplo, cómo navegar entre páginas, interactuar con componentes, etc.
 
-##Licencia.
+2. Navega a la carpeta del proyecto:
+   ```bash
+   cd nombre-del-proyecto
+3. Instala las dependencias:
+   ```bash
+   npm install
+4. Inicia la aplicación
+   ```bash
+   npm start
+
+
+## Licencia
 Este proyecto está bajo la Licencia MIT - consulta el archivo LICENSE para más detalles.
 
 
