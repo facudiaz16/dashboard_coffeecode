@@ -27,9 +27,7 @@ Grupo 3: CoffeeCode aplicando React.
 
 - [React](https://reactjs.org/)
 - [React Router](https://reactrouter.com/)
-- [Redux](https://redux.js.org/) (opcional)
-- [Jest](https://jestjs.io/) (opcional)
-- [CSS Modules](https://github.com/css-modules/css-modules) o [Styled Components](https://styled-components.com/) (opcional)
+- [CSS Modules](https://github.com/css-modules/css-modules) o [Styled Components](https://styled-components.com/) 
 
 ## Instalación
 
