@@ -1,12 +1,27 @@
 import React from 'react';
 import SmallCard from './SmallCard';
+import { useState, useEffect } from 'react';
 
 
-/*  Cada set de datos es un objeto literal */
+function ContentRowProducts(){
 
-/* <!-- Movies in DB --> */
+    const [cantidadUsuarios, setCantidadUsuarios] = useState(0);
 
-let moviesInDB = {
+useEffect(() => {
+    const fetchCantidadUsuarios = async () => {
+      try {
+        const response = await fetch('http://localhost:3000/api/users');
+        const data = await response.json();
+        setCantidadUsuarios(data.count); 
+      } catch (error) {
+        console.error('Error al llamar a la API users:', error);
+      }
+    };
+
+    fetchCantidadUsuarios(); 
+  }, []);
+
+  let moviesInDB = {
     title: 'Productos en BD',
     color: 'primary', 
     cuantity: 21,
@@ -22,18 +37,16 @@ let totalAwards = {
     icon:'fa-award'
 }
 
-/* <!-- Actors quantity --> */
 
-let actorsQuantity = {
+
+let usersCount = {
     title:'Total Usuarios' ,
     color:'warning',
-    cuantity:'49',
+    cuantity: cantidadUsuarios,
     icon:'fa-user-check'
 }
 
-let cartProps = [moviesInDB, totalAwards, actorsQuantity];
-
-function ContentRowProducts(){
+let cartProps = [moviesInDB, totalAwards, usersCount];
     return (
     
         <div className="row">

@@ -1,7 +1,7 @@
 import React from "react";
 import ContentRowTop from "./ContentRowTop";
 import Footer from "./Footer";
-
+import '@fortawesome/fontawesome-free/css/all.min.css'
 
 export default function Root() {
   return (

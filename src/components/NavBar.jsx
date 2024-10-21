@@ -77,7 +77,7 @@ export default function NavBar() {
         </div>
         <li className="nav-item">
                     <Link className="nav-link" to="/last-product-in-db">
-                        <i className="fas fa-fw fa-chart-area"></i>
+                        <i className="fas fa-coffee"></i>
                         <p className="span1">Detalle ultimo Producto en BD</p></Link>
                 </li>
         </nav>
