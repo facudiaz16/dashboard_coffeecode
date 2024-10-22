@@ -1,4 +1,4 @@
-import { Link, Outlet } from "react-router-dom";
+import { NavLink, Outlet} from "react-router-dom";
 import '../index.css';
 import React, { useState } from "react";
 import logoCoffecode from '../assets/logo.svg';
@@ -7,6 +7,7 @@ export default function NavBar() {
   // Estado para controlar el menú desplegable
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const [isSalesDropdownOpen, setSalesDropdownOpen] = useState(false);
+
 
   // Función para alternar el menú desplegable
   const toggleDropdown = () => {
@@ -17,6 +18,9 @@ export default function NavBar() {
     setSalesDropdownOpen(!isSalesDropdownOpen);
   };
 
+
+  
+
   return (
     <>
       <div id="sidebar">
@@ -25,9 +29,9 @@ export default function NavBar() {
           DashBoard
         </h1>
         <div className="nav-item active">
-          <Link className="nav-link" to="/">
+        <NavLink className="nav-link" to="/">
             <img className="logocfc" src={logoCoffecode} alt="logo" />
-          </Link>
+          </NavLink>
           <form method="post">
             <button style={{color:"#823a6f"}} type="submit">Nuevo Producto</button>
           </form>
@@ -42,13 +46,22 @@ export default function NavBar() {
           {isDropdownOpen && (
             <ul className="menu-drop">
               <li>
-                <Link to="/total-products">Total de Productos</Link>
+              <NavLink 
+                  to="/total-products" 
+                  className={({ isActive }) => isActive ? "active" : ""}
+                >Total de Productos</NavLink>
               </li>
               <li>
-                <Link to="/total-users">Total de Usuarios</Link>
+              <NavLink 
+                  to="/total-users" 
+                  className={({ isActive }) => isActive ? "active" : ""}
+                >Total de Usuarios</NavLink>
               </li>
               <li>
-                <Link to="/total-categories">Total de Categorías</Link>
+              <NavLink 
+                  to="/total-categories" 
+                  className={({ isActive }) => isActive ? "active" : ""}
+                >Total de Categorías</NavLink>
               </li>
             </ul>
           )}
@@ -61,29 +74,44 @@ export default function NavBar() {
           {isSalesDropdownOpen && (
             <ul className="drop-menu">
               <li>
-                <Link to="/total-sales">Total de Productos Vendidos</Link>
+              <NavLink 
+                  to="/total-products-sold" 
+                  className={({ isActive }) => isActive ? "active" : ""}
+                >Total de Productos Vendidos</NavLink>
               </li>
               <li>
-                <Link to="/total-sales">Total de Ventas</Link>
+              <NavLink 
+                  to="/total-sales" 
+                  className={({ isActive }) => isActive ? "active" : ""}
+                >Total de Ventas</NavLink>
               </li>
               <li>
-                <Link to="/last-5-sales">Últimos 5 Productos Vendidos</Link>
+              <NavLink 
+                  to="/last-5-sales" 
+                  className={({ isActive }) => isActive ? "active" : ""}
+                >Últimos 5 Productos Vendidos</NavLink>
               </li>
               <li>
-                <Link to="/top-5-sales">Top 5 Productos Más Vendidos</Link>
+              <NavLink 
+                  to="/top-5-sales" 
+                  className={({ isActive }) => isActive ? "active" : ""}
+                >Top 5 Productos Más Vendidos</NavLink>
               </li>
             </ul>
           )}
         </div>
         <li className="nav-item">
-                    <Link className="nav-link" to="/last-product-in-db">
+        <NavLink 
+            className={({ isActive }) => isActive ? "active" : "nav-link"} 
+            to="/last-product-in-db"
+          >
                         <i className="fas fa-coffee"></i>
-                        <p className="span1">Detalle ultimo Producto en BD</p></Link>
+                        <p className="span1">Detalle ultimo Producto en BD</p></NavLink>
                 </li>
         </nav>
       </div>
       <div id="detail">
-        <Outlet />
+          <Outlet />
       </div>
     </>
   );

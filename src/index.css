@@ -394,6 +394,7 @@ i {
   color: #823a6f;
   padding-top: 15px;
 }
+
 .span2{
   color: #eeb004;
   padding-right: 5px;
@@ -424,3 +425,18 @@ i {
   color: #823a6f;
   margin-left: 25px;
  }
+
+ .active {
+  .span1{
+    color: #f7f7f7;
+  }
+}
+
+.spinner {
+  font-size: 18px;
+  color: #823a6f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
