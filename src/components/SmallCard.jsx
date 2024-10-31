@@ -1,4 +1,3 @@
-import React from 'react';
 
 
 function SmallCard({ title, color, cuantity, icon }) {
