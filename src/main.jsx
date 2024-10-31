@@ -16,12 +16,12 @@ const router = createBrowserRouter([
     path: "/",
     element: <App />,
     errorElement: <ErrorPage />,
-    
+
     children: [
       {
         errorElement: <ErrorPage />,
         children: [
-          {index: true, element: <Root />},
+          { index: true, element: <Root /> },
           {
             path: "/last-product-in-db",
             element: <LastProductInDb />

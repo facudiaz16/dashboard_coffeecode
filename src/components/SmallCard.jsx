@@ -1,8 +1,7 @@
-import React from 'react';
 
 
-function SmallCard({ title, color, cuantity, icon }){
-    return(
+function SmallCard({ title, color, cuantity, icon }) {
+    return (
         <div className="col-md-4 mb-4">
             <div className={`card border-left-${color} shadow h-100 py-2`}>
                 <div className="card-body">
@@ -18,7 +17,7 @@ function SmallCard({ title, color, cuantity, icon }){
                 </div>
             </div>
         </div>
-        
+
     )
 }
 

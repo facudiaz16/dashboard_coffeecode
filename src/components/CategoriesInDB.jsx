@@ -1,5 +1,3 @@
-import React from "react";
-
 
 function CategoriesInDb() {
   return (
@@ -52,10 +50,10 @@ function CategoriesInDb() {
                 <div className="card-body">EXPRESS</div>
               </div>
             </div>
-            </div>
           </div>
         </div>
       </div>
+    </div>
   );
 }
 
