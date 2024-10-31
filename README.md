@@ -6,7 +6,7 @@
 
 Grupo 3: CoffeeCode aplicando React.
 
-(me ayudan los chicos a agg descripcion)
+CoffeeCode es una tienda en línea dedicada a los amantes del café, donde ofrecemos una variedad de cafés especiales y únicos, cuidadosamente seleccionados de diferentes regiones del mundo. Con CoffeeCode, puedes explorar sabores únicos, aprender sobre el origen y el proceso de cada café, y personalizar tu pedido para recibir la mejor experiencia de café en casa. Con una interfaz moderna y amigable construida en React, nuestra web te permitirá navegar, elegir, y comprar café de manera sencilla y rápida, mientras exploras la cultura del café en cada taza.
 
 ## Índice
 
@@ -48,5 +48,8 @@ Grupo 3: CoffeeCode aplicando React.
 
 ## Licencia
 Este proyecto está bajo la Licencia MIT - consulta el archivo LICENSE para más detalles.
+
+
+
 
 
