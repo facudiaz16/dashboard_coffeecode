@@ -1,6 +1,6 @@
 import { NavLink, Outlet } from "react-router-dom";
 import '../index.css';
-import React, { useState } from "react";
+import { useState } from "react";
 import logoCoffecode from '../assets/logo.svg';
 
 export default function NavBar() {
