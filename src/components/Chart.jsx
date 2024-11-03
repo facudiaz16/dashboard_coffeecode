@@ -5,18 +5,11 @@ import ChartRow from './ChartRow';
 
 let tableRowsData = [
     {
-        Title: 'Billy Elliot ',
-        Length: '123',
-        Rating: '5',
+        Nombre: 'Billy Elliot ',
+        Presentacion: ['250grs', '1kg'],
+        Tipo: '5',
         Categories: ['Drama', 'Comedia'],
         Awards: 2
-    },
-    {
-        Title: 'Alicia en el país de las maravillas',
-        Length: '142',
-        Rating: '4.8',
-        Categories: ['Drama', 'Acción', 'Comedia'],
-        Awards: 3
     },
 
 ]
@@ -31,18 +24,18 @@ function Chart() {
                     <table className="table table-bordered" id="dataTable" width="100%" cellSpacing="0">
                         <thead>
                             <tr>
-                                <th>Título</th>
-                                <th>Duración</th>
-                                <th>Rating</th>
+                                <th>Nombre</th>
+                                <th>Presentacion</th>
+                                <th>Tipo de cafe</th>
                                 <th>Género</th>
                                 <th>Premios</th>
                             </tr>
                         </thead>
                         <tfoot>
                             <tr>
-                                <th>Título</th>
-                                <th>Duración</th>
-                                <th>Rating</th>
+                                <th>Nombre</th>
+                                <th>Presentacion</th>
+                                <th>Tipo de cafe</th>
                                 <th>Género</th>
                                 <th>Premios</th>
                             </tr>
