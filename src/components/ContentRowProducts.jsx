@@ -1,4 +1,5 @@
 
+import Footer from './Footer';
 import SmallCard from './SmallCard';
 import { useState, useEffect } from 'react';
 
@@ -56,7 +57,6 @@ function ContentRowProducts() {
         return <SmallCard {...movie} key={i} />
 
       })}
-
     </div>
   )
 }

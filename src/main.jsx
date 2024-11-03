@@ -8,8 +8,10 @@ import "./index.css";
 import App from "./App"
 import ErrorPage from "./Error-Page";
 import Root from "./components/Root";
-
 import LastProductInDb from "./components/LastProductInDb";
+import ContentRowProducts from "./components/ContentRowProducts";
+import CategoriesInDb from "./components/CategoriesInDB";
+import Chart from "./components/Chart";
 
 const router = createBrowserRouter([
   {
@@ -24,7 +26,19 @@ const router = createBrowserRouter([
           { index: true, element: <Root /> },
           {
             path: "/last-product-in-db",
-            element: <LastProductInDb />
+            element: <LastProductInDb />,
+          },
+          {
+            path: "/total",
+            element: <ContentRowProducts />
+          },
+          {
+            path: "/tipos-cafes",
+            element: <CategoriesInDb />
+          },
+          {
+            path: "/lista-productos",
+            element: <Chart />
           }
         ]
       }

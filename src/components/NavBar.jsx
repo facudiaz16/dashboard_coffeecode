@@ -25,47 +25,60 @@ export default function NavBar() {
     <>
       <div id="sidebar">
         <h1 style={{ color: "#823a6f" }}>
-          <img className="logocfc" src={logoCoffecode} alt="logo" />
-          DashBoard
+          <img className="logocfc" src={logoCoffecode} alt="logo" style={{width: "250px", height: "80px" }} />
+          
         </h1>
         <div className="nav-item active">
           <NavLink className="nav-link" to="/">
-            <img className="logocfc" src={logoCoffecode} alt="logo" />
+            <img className="logocfc" src={logoCoffecode} alt="logo" style={{width: "250px", height: "80px" }} />
+           <hr /> 
+            <span className="span2">COFFEECODE - DASHBOARD</span>
           </NavLink>
-          <form method="post">
-            <button style={{ color: "#823a6f" }} type="submit">Nuevo Producto</button>
-          </form>
+          
         </div>
         <nav>
-          <span className="span2">CoffeCode -- DashBoard</span>
-          <hr />
-          <div className="drop-panel">
-            <button onClick={toggleDropdown} className="drop-btn" >
-              Total
-            </button>
-            {isDropdownOpen && (
-              <ul className="menu-drop">
-                <li>
-                  <NavLink
-                    to="/total-products"
-                    className={({ isActive }) => isActive ? "active" : ""}
-                  >Total de Productos</NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    to="/total-users"
-                    className={({ isActive }) => isActive ? "active" : ""}
-                  >Total de Usuarios</NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    to="/total-categories"
-                    className={({ isActive }) => isActive ? "active" : ""}
-                  >Total de Categorías</NavLink>
-                </li>
-              </ul>
-            )}
-          </div>
+        <li className="nav-item">
+            <NavLink
+              className={({ isActive }) => isActive ? "" : "nav-link"}
+              to="/"
+            >
+              <i className="fas fa-home" ></i>
+              <p className="span1">Home</p>
+              </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink
+              className={({ isActive }) => isActive ? "active" : "nav-link"}
+              to="/last-product-in-db"
+            >
+              <i className="fas fa-coffee"></i>
+              <p className="span1">Detalle ultimo Producto en BD</p></NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink
+              className={({ isActive }) => isActive ? "active" : "nav-link"}
+              to="/total"
+            >
+              <i className="fas fa-box"></i>
+              <p className="span1">Total</p></NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink
+              className={({ isActive }) => isActive ? "active" : "nav-link"}
+              to="/tipos-cafes">
+              <i className="fas fa-coffee"></i>
+              <p className="span1">Tipos de cafes</p></NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink
+              className={({ isActive }) => isActive ? "active" : "nav-link"}
+              to="/lista-productos">
+              <i className="fas fa-coffee"></i>
+              <p className="span1">Lista de productos</p></NavLink>
+          </li>
+          <form method="post">
+            <button className="drop-btn" type="submit">+ Nuevo Producto</button>
+          </form>
           <div className="drop-panel">
             <button onClick={toggleSalesDropdown} className="drop-btn">
               Ventas
@@ -100,14 +113,6 @@ export default function NavBar() {
               </ul>
             )}
           </div>
-          <li className="nav-item">
-            <NavLink
-              className={({ isActive }) => isActive ? "active" : "nav-link"}
-              to="/last-product-in-db"
-            >
-              <i className="fas fa-coffee"></i>
-              <p className="span1">Detalle ultimo Producto en BD</p></NavLink>
-          </li>
         </nav>
       </div>
       <div id="detail">
