@@ -44,7 +44,7 @@ button {
 }
 
 button {
-  color: #3992ff;
+  color: #823a6f;
   font-weight: 500;
 }
 
@@ -468,4 +468,22 @@ i {
   justify-content: center;
   align-items: center;
   height: 100vh;
+}
+
+.Modal {
+  background: #f7f7ff;
+  padding: 20px;
+  border-radius: 4px;
+  max-width: 800px;
+  margin: auto;
+}
+
+
+.Overlay {
+  background: rgba(0, 0, 0, 0.75);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
