@@ -1,5 +1,3 @@
-
-import Footer from './Footer';
 import SmallCard from './SmallCard';
 import { useState, useEffect } from 'react';
 
@@ -13,7 +11,7 @@ function ContentRowProducts() {
       try {
         const response = await fetch('http://localhost:3000/api/users');
         const data = await response.json();
-        setCantidadUsuarios(data.count);
+        setCantidadUsuarios(data.count ?? 0);
       } catch (error) {
         console.error('Error al llamar a la API users:', error);
       }
@@ -57,6 +55,7 @@ function ContentRowProducts() {
         return <SmallCard {...movie} key={i} />
 
       })}
+
     </div>
   )
 }

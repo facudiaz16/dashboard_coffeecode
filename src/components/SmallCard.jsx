@@ -1,4 +1,4 @@
-
+import PropTypes from "prop-types";
 
 function SmallCard({ title, color, cuantity, icon }) {
     return (
@@ -20,7 +20,11 @@ function SmallCard({ title, color, cuantity, icon }) {
 
     )
 }
-
-
-
 export default SmallCard;
+
+SmallCard.propTypes = {
+    title: PropTypes.string,
+    color: PropTypes.string,
+    cuantity: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    icon: PropTypes.string.isRequired
+}
