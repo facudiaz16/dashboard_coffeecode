@@ -1,6 +1,5 @@
-
-import LastProductInDb from './LastProductInDb';
-import CategoriesInDb from './CategoriesInDB';
+import LastProductInDb from './LastProductInDb'
+import CategoriesInDb from './CategoriesInDB'
 
 
 function ContentRowCenter() {

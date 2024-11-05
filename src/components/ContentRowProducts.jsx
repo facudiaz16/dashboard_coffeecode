@@ -5,7 +5,22 @@ import { useState, useEffect } from 'react';
 function ContentRowProducts() {
 
   const [cantidadUsuarios, setCantidadUsuarios] = useState(0);
+  const [productos, setProductos] = useState(0);
 
+  useEffect(() => {
+    const fetchProductos = async () => {
+      try {
+        const response = await fetch('http://localhost:3000/api/products');
+        const data = await response.json();
+        setProductos(data.count ?? 0);
+      } catch (error) {
+        console.error('Error al llamar a la API products:', error);
+      }
+    };
+
+    fetchProductos();
+  }, []);
+  
   useEffect(() => {
     const fetchCantidadUsuarios = async () => {
       try {
@@ -23,7 +38,7 @@ function ContentRowProducts() {
   let moviesInDB = {
     title: 'Productos en BD',
     color: 'primary',
-    cuantity: 21,
+    cuantity: productos,
     icon: 'fa-clipboard-list'
   }
 
