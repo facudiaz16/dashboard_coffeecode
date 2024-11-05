@@ -6,6 +6,21 @@ function ContentRowProducts() {
 
   const [cantidadUsuarios, setCantidadUsuarios] = useState(0);
   const [productos, setProductos] = useState(0);
+  const [tipos, setTipos] = useState(0);
+
+  useEffect(() => {
+    const fetchTiposProductos = async () => {
+      try {
+        const response = await fetch('http://localhost:3000/api/tipoProducts');
+        const data = await response.json();
+        setTipos(data.count ?? 0);
+      } catch (error) {
+        console.error('Error al llamar a la API TiposProducts:', error);
+      }
+    };
+
+    fetchTiposProductos();
+  }, []);
 
   useEffect(() => {
     const fetchProductos = async () => {
@@ -20,7 +35,7 @@ function ContentRowProducts() {
 
     fetchProductos();
   }, []);
-  
+
   useEffect(() => {
     const fetchCantidadUsuarios = async () => {
       try {
@@ -45,9 +60,9 @@ function ContentRowProducts() {
   /* <!-- Total awards --> */
 
   let totalAwards = {
-    title: ' Total Categorias',
+    title: ' Total Tipos de Café',
     color: 'success',
-    cuantity: '79',
+    cuantity: tipos,
     icon: 'fa-award'
   }
 
