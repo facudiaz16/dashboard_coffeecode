@@ -133,7 +133,11 @@ export default function NavBar() {
           }}
           title="Formulario de creación de producto"
         ></iframe>
+        <div className="nota">
         <button onClick={closeModal}>Cerrar</button>
+        <p> *user: admin3@admin.com</p>
+        <p> *password: 123@Admin</p>
+        </div>
       </Modal>
       <div id="detail">
         <Outlet /> 
