@@ -9,7 +9,7 @@ function CategoriesInDb() {
       try {
         const response = await fetch('http://localhost:3000/api/tipoProducts');
         const data = await response.json();
-        console.log("total" + data)
+  
         setTiposCafe(data.product || []); // Guarda los tipos de café
 
       } catch (error) {
