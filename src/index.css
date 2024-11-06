@@ -118,6 +118,13 @@ form[action$="destroy"] button {
   flex-direction: column;
 }
 
+.active:hover{
+ 
+    color: white;
+  
+  
+}
+
 #sidebar>* {
   padding-left: 2rem;
   padding-right: 2rem;
@@ -236,8 +243,10 @@ i {
   gap: 1rem;
 }
 
+
+
 #sidebar nav a:hover {
-  background: #e3e3e3;
+  background: #a99ac4;
 }
 
 #sidebar nav a.active {
@@ -406,12 +415,14 @@ i {
 .nav-item {
   display: flex;
   margin: 5px;
+  
 }
 
 .span1 {
   color: #823a6f;
   padding-top: 15px;
   width: 250px;
+  
 }
 
 .span2 {
@@ -420,9 +431,18 @@ i {
   margin-left: 30px;
 }
 
+.span1:hover{
+  color: white;
+}
+
+.span2:hover{
+  color: white;
+}
+
 .logocfc {
   width: 60px;
   height: 50px;
+  
 }
 
 .app-container {
