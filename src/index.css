@@ -118,13 +118,6 @@ form[action$="destroy"] button {
   flex-direction: column;
 }
 
-.active:hover{
- 
-    color: white;
-  
-  
-}
-
 #sidebar>* {
   padding-left: 2rem;
   padding-right: 2rem;
